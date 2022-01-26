@@ -49,8 +49,9 @@ Idea
 - Thus, each part must have even number of persons and so k must be even.
 - Hence, the problem can be divided into two subproblems.
 - So, count(N) = count(k-2)*count(N-k) for all even k from 2 to N.
-```java
 
+Code: 
+```java
 static int count(int N) 
 { 
     if(N%2==1) return 0;
