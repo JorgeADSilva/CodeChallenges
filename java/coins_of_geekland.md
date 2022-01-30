@@ -28,7 +28,7 @@ Output: 4
 
 
 
-### Solution applied (Java)
+### Solution applied - Approach 1 - Aux Matrix (Java)
 ```java
 class Solution
 {
@@ -62,5 +62,28 @@ class Solution
        }
        return sum;
     }
+}
+```
+
+
+### Solution applied - Approach 2 - Moves Calculation (Java)
+```java
+class Solution
+{
+    public int Maximum_Sum(int mat[][],int N,int K){
+        int max=0,sum=0;
+        for(int moveHorizontally=0;moveHorizontally<=N-K;moveHorizontally++)
+        for(int moveVertically=0;moveVertically<=N-K;moveVertically++){
+            sum=0;
+            for(int i=moveVertically;i<moveVertically+K;i++){
+                for(int j=moveHorizontally;j<moveHorizontally+K;j++){
+                    sum+=mat[i][j];
+                }
+                if(sum>max)
+                    max=sum;
+            }
+       }
+       return max;
+   }
 }
 ```
