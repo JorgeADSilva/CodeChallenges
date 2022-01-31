@@ -115,3 +115,53 @@ public static class Node{
 
 ```
 
+Pseudo Code
+````
+----------------
+--curr.id--=2
+Pair: [0, 6]
+--Entered--
+--tempdist--=6
+--dist[end]--=2147483647
+--end--=0
+----------------
+--curr.id=2
+Pair: [1, 3]
+--Entered--
+--tempdist--=3
+--dist[end]--=2147483647
+--end--=1
+----------------
+--curr.id=1
+Pair: [0, 1]
+--Entered--
+--tempdist--=4
+--dist[end]--=6
+--end--=0
+----------------
+--curr.id=1
+Pair: [2, 3]
+--Continue--
+----------------
+--curr.id--=0
+Pair: [1, 1]
+--Continue--
+----------------
+--curr.id--=0
+Pair: [2, 6]
+--Continue--
+----------------
+--curr.id=0
+Pair: [1, 1]
+--Continue--
+----------------
+--curr.id=0
+Pair: [2, 6]
+--Continue--
+
+Output:
+4 3 0 
+
+
+````
+
