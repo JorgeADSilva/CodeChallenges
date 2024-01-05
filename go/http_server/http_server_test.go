@@ -6,6 +6,11 @@ import (
 	"testing"
 )
 
+/*
+To run the unit tests with details run the following command:
+	- go test -v
+*/
+
 func TestHomeHandler(t *testing.T) {
 	req, err := http.NewRequest("GET", "/", nil)
 	if err != nil {
